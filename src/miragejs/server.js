@@ -1,9 +1,9 @@
-import { Server } from 'miragejs';
-import factories from './factories';
-import fixtures from './fixtures';
-import routes from './routes';
-import models from './models';
-import seeds from './seeds';
+import { Server } from "miragejs";
+import factories from "./factories";
+import fixtures from "./fixtures";
+import routes from "./routes";
+import models from "./models";
+import seeds from "./seeds";
 
 const config = environment => {
   const config = {
@@ -21,6 +21,6 @@ const config = environment => {
   return config;
 };
 
-export function makeServer({ environment = 'development' } = {}) {
+export function makeServer({ environment = "development" } = {}) {
   return new Server(config(environment));
 }
