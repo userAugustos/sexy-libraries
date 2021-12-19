@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /*
  * Mirage JS guide on Factories: https://miragejs.com/docs/data-layer/factories
  */

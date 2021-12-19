@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 2 */
 /*
  * Mirage JS guide on Factories: https://miragejs.com/docs/data-layer/factories
  */
@@ -11,6 +12,6 @@ import message from "./message";
  * be done for all future factories
  */
 export default {
-  user,
-  message,
+  ...user,
+  ...message,
 };

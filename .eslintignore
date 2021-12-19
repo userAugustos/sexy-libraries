@@ -1,3 +1,4 @@
-{
-  "ignorePatterns": [".gitignore", "**/node_modules/*", "**/miragejs/*" ]
-}
+.gitignore
+node_modules
+**/miragejs
+*.spec.js

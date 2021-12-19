@@ -11,7 +11,6 @@ describe("Containers/Users", () => {
   beforeEach(() => {
     server = makeServer({ evnironment: "test" });
   });
-
   afterEach(() => {
     server.shutdown();
   });
@@ -22,7 +21,7 @@ describe("Containers/Users", () => {
 
     await waitFor(() => {
       // esperando ser renderizado os usuarios
-      expect(screen.getAllByTestId("user")).toHaveLength(3);
+      expect(screen.getAllByTestId("user")).toHaveLength(6); // 6 por que o seeds do mirage já ta interceptando a resquests do users e retornando 3 usuarios
     });
   });
 });

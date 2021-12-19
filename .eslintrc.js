@@ -9,19 +9,27 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 6,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: ['react', 'prettier'],
+  plugins: ["react", "prettier"],
   rules: {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "prettier/prettier": "error",
-    "quotes": ["error", "double"],
+    quotes: ["error", "double"],
     "jsx-quotes": ["error", "prefer-single"],
     "arrow-parens": ["error", "as-needed"],
     "import/prefer-default-export": "off",
-    "react/function-component-definition": [2, {
-      "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function | "
-    }]
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
   },
+  overrides: [
+    {
+      files: ["**/node_modules/*", "**/miragejs/*", "**/*.spec.js"],
+    },
+  ],
 };

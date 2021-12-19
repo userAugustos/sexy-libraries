@@ -6,10 +6,11 @@ export const Users = () => {
 
   useEffect(() => {
     http.get("/users").then(({ data }) => setUsers(data.users));
+    console.log(users);
   }, []);
 
   return (
-    <div>
+    <div className=''>
       {users.map(user => (
         <p key={user.id} data-testid='user'>
           {user.name}

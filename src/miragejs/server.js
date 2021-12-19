@@ -6,7 +6,7 @@ import models from "./models";
 import seeds from "./seeds";
 
 const config = environment => {
-  const config = {
+  const configSets = {
     environment,
     factories,
     models,
@@ -15,10 +15,10 @@ const config = environment => {
   };
 
   if (Object.keys(fixtures).length) {
-    config.fixtures = fixtures;
+    configSets.fixtures = fixtures;
   }
 
-  return config;
+  return configSets;
 };
 
 export function makeServer({ environment = "development" } = {}) {

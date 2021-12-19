@@ -4,6 +4,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import "./styles/main.scss";
 
 if (process.env.NODE_ENV === "development") {
   // You can't use import in a conditional so we're using require() so no
