@@ -1,11 +1,6 @@
 import React from "react";
+import { Users } from "./containers/Users/Users";
 
-function App() {
-  return (
-    <div>
-      <p>Iniciando projeto</p>
-    </div>
-  );
-}
+const App = () => <Users />;
 
 export default App;
