@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
-import { makeServer } from "../../miragejs/server";
+import { makeServer } from "../../../miragejs/server";
 import { Users } from "./Users";
 
 describe("Containers/Users", () => {

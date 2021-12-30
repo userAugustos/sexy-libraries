@@ -13,19 +13,21 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
+    "prettier/prettier": "warn",
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "prettier/prettier": "error",
+    "react/prop-types": "off",
     quotes: ["error", "double"],
     "jsx-quotes": ["error", "prefer-single"],
-    "arrow-parens": ["error", "as-needed"],
+    "arrow-parens": ["warn", "as-needed"],
     "import/prefer-default-export": "off",
     "react/function-component-definition": [
-      2,
+      1,
       {
         namedComponents: "arrow-function",
         unnamedComponents: "arrow-function",
       },
     ],
+    "func-style": [0],
   },
   overrides: [
     {
