@@ -1,7 +1,7 @@
 /* eslint comma-dangle: ["warn", {"functions": "never"}] */
 import React, { Fragment } from "react";
 import {
-  Outlet, ReactLocation, Router,
+  Outlet, ReactLocation, Router, Link
 } from "react-location";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -51,9 +51,9 @@ const App = () => (
                   <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
                       {navigation.map(item => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.href}
+                          to={item.href}
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-white"
@@ -63,7 +63,7 @@ const App = () => (
                           aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
